@@ -33,7 +33,11 @@ puts favorite_foods.size
 
 puts shopping_lists.count
 puts shopping_lists.size
-puts shopping_lists
+
+#how to count elements within nested array
+puts shopping_lists[0].size
+
+# puts shopping_lists
 # There are lots of fun things you can do with arrays:
 # https://ruby-doc.org/core-2.7.0/Array.html
 
