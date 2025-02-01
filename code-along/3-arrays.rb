@@ -21,6 +21,21 @@ puts favorite_foods[0] #can use negative numbers to go backwards in an array
 puts """"
 puts shopping_lists[1][2]
 # Add to the array
+favorite_foods.push("more tacos")
+favorite_foods = favorite_foods + ["frensh fries", "ramen"]
+puts favorite_foods
 
+
+#to see how many things are in array 
+puts nil
+puts favorite_foods.count
+puts favorite_foods.size
+
+puts shopping_lists.count
+puts shopping_lists.size
+puts shopping_lists
 # There are lots of fun things you can do with arrays:
 # https://ruby-doc.org/core-2.7.0/Array.html
+
+#https://ruby-doc.org/core-3.0.1/Array.html
+#^^has what you can do with arrays
