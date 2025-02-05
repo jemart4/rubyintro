@@ -38,7 +38,7 @@ puts "The 7 day forecast is: "
 
 # end
 
-puts "Currently it is " + weather_data[:current][:temperature].to_s + " degreed and " + weather_data[:current][:conditions].to_s
+puts "Currently it is " + weather_data[:current][:temperature].to_s + " degrees and " + weather_data[:current][:conditions].to_s
 
 index = 0
 loop do 
@@ -46,19 +46,18 @@ loop do
     break
   end
   
+  precip_string = ""
+  #creates string if chance of rain is greater than 50% and it's not already rainy
   precip = weather_data[:forecast][index][:precipitation]
-  if  precip > 0.5
-    
-    precip_string = " with a " + weather_data[:forecast][index][:precipitation].to_s + "% chance of rain"
+  if  precip > 0.5 && weather_data[:forecast][index][:conditions] != "Rainy"
+        dec = weather_data[:forecast][index][:precipitation] * 100
+        percent = dec.to_i
+       precip_string = " with a " + percent.to_s + "% chance of rain"
     end
    
+    #outputs weather 
 puts "- " + weather_data[:forecast][index][:temperature].to_s + " degrees and " + weather_data[:forecast][index][:conditions] + precip_string.to_s
 
 index = index +1
 end 
 
-# index = 0 
-# for 
-
-# index = index + 1
-# end
