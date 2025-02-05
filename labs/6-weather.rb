@@ -30,3 +30,35 @@ weather_data = {
     { temperature: 60, conditions: "Rainy", precipitation: 0.9 }
   ]
 }
+
+puts "The 7 day forecast is: "
+# for index in weather_data
+# puts "- #{index}"
+
+
+# end
+
+puts "Currently it is " + weather_data[:current][:temperature].to_s + " degreed and " + weather_data[:current][:conditions].to_s
+
+index = 0
+loop do 
+  if index == weather_data[:forecast].size
+    break
+  end
+  
+  precip = weather_data[:forecast][index][:precipitation]
+  if  precip > 0.5
+    
+    precip_string = " with a " + weather_data[:forecast][index][:precipitation].to_s + "% chance of rain"
+    end
+   
+puts "- " + weather_data[:forecast][index][:temperature].to_s + " degrees and " + weather_data[:forecast][index][:conditions] + precip_string.to_s
+
+index = index +1
+end 
+
+# index = 0 
+# for 
+
+# index = index + 1
+# end
