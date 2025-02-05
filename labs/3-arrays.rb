@@ -15,3 +15,28 @@
 # HINTS
 # Learn to read the documentation!
 # https://ruby-doc.org/core-2.7.0/Array.html
+
+
+shopping_list = ["milk", "eggs", "bread", "toilet paper"]
+puts shopping_list
+
+shopping_list2 = ["beer", "cookies", "apples", "toilet paper"]
+puts shopping_list2
+puts nil
+
+combined_list = shopping_list + shopping_list2
+puts combined_list
+
+puts nil
+
+sorted_list = combined_list.sort
+puts sorted_list
+
+puts nil
+
+unique_list = sorted_list.uniq
+puts unique_list
+
+
+
+
